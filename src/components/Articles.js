@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const apiEndpoint = 'https://jsonmock.hackerrank.com/api/articles?author=';
 const responseLimit = 3;
