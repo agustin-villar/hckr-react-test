@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
 const apiEndpoint = 'https://jsonmock.hackerrank.com/api/articles?author=';
+const responseLimit = 3;
+
+function filterNullTitles(data, limit) {
+  return data.filter((item) => item.title !== null).splice(0, limit);
+}
 
 const Articles = () => {
   const [author, setAuthor] = useState('');
-  const [response, setResponse] = useState([]);
+  const [response, setResponse] = useState(null);
 
   async function fetchData() {
     let json;
@@ -17,8 +22,7 @@ const Articles = () => {
       response = e;
     }
     
-    console.log(response);
-    setResponse(response.data);
+    setResponse(filterNullTitles(response.data, responseLimit));
   }
 
   return (
@@ -35,7 +39,7 @@ const Articles = () => {
             <li key={title} data-testid="result-row">{title}</li>
           ))}
       </div>
-      {!response && (
+      {(response && response.length === 0) && (
         <div data-testid="no-results">No results</div>
       )}
     </ React.Fragment>
