@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 
-const apiEndpoint = 'https://jsonmock.hackerrank.com/api/articles?author=';
+const apiEndpoint = 'response.json?';
 const responseLimit = 3;
 
 function filterNullTitles(data, limit) {
-  return data.filter((item) => item.title !== null).splice(0, limit);
+  return data.filter((item) => item.title).splice(0, limit);
 }
 
 const Articles = () => {
