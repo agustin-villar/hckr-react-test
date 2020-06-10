@@ -1,0 +1,10 @@
+<testsuites name="jest tests" tests="3" failures="0" time="1.247">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2020-06-06T15:56:53" time="1.247" tests="3">
+    <testcase classname=" Initial UI renders correctly" name=" Initial UI renders correctly" time="0.091">
+    </testcase>
+    <testcase classname=" Test with non existing author" name=" Test with non existing author" time="0.045">
+    </testcase>
+    <testcase classname=" Test with existing author" name=" Test with existing author" time="0.009">
+    </testcase>
+  </testsuite>
+</testsuites>
